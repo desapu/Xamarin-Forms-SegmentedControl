@@ -48,6 +48,10 @@ namespace SegmentedControl.Android
 				g.AddView (v);
 			}
 
+			// Set default segment
+			RadioButton selectedRB = (RadioButton) g.GetChildAt(e.NewElement.SelectedSegmentIndex);
+			selectedRB.Checked = true;
+
 			SetNativeControl (g);
 		}
 	}

@@ -7,6 +7,7 @@ namespace SegmentedControl
 	public class SegmentedControl : View, IViewContainer<SegmentedControlOption>
 	{
 		public IList<SegmentedControlOption> Children { get; set; }
+		public int SelectedSegmentIndex { get; set;}
 
 		public SegmentedControl ()
 		{

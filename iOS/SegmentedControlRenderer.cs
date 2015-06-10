@@ -22,6 +22,10 @@ namespace SegmentedControl.iOS
 				segmentedControl.InsertSegment (e.NewElement.Children [i].Text, i, false);
 			}
 
+			// Set default segment
+			segmentedControl.SelectedSegment = e.NewElement.Children.Count > e.NewElement.SelectedSegmentIndex ? e.NewElement.SelectedSegmentIndex : 0;
+
+
 			segmentedControl.ValueChanged += (sender, eventArgs) => {
 				e.NewElement.SelectedValue = segmentedControl.TitleAt(segmentedControl.SelectedSegment);
 			};
